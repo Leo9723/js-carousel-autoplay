@@ -83,3 +83,20 @@ prev.addEventListener('click', function(){
         circles[itemActive].classList.add('active')
     }
 })
+
+setInterval(function () {
+    if(itemActive < items.length -1){
+        items[itemActive].classList.remove('active')
+        circles[itemActive].classList.remove('active')
+        itemActive++
+        items[itemActive].classList.add('active')
+        circles[itemActive].classList.add('active')
+    }
+    else {
+        items[itemActive].classList.remove('active')
+        circles[itemActive].classList.remove('active')
+        itemActive = 0
+        items[itemActive].classList.add('active')
+        circles[itemActive].classList.add('active')
+    }
+}, 2000);
