@@ -84,7 +84,9 @@ prev.addEventListener('click', function(){
     }
 })
 
-setInterval(function () {
+const TimeInterval = setInterval(autoplay, 1000);
+    
+function autoplay() {
     if(itemActive < items.length -1){
         items[itemActive].classList.remove('active')
         circles[itemActive].classList.remove('active')
@@ -99,4 +101,20 @@ setInterval(function () {
         items[itemActive].classList.add('active')
         circles[itemActive].classList.add('active')
     }
-}, 2000);
+  }
+
+let play_button = document.getElementById('play')
+let stop_button = document.getElementById('stop')
+
+function myStop() {
+    clearInterval(TimeInterval);
+  }
+
+stop_button.addEventListener('click', function(){
+    myStop()
+})
+
+play_button.addEventListener('click', function(){
+    TimeInterval = setInterval(autoplay, 1000);
+    autoplay()
+})

@@ -15,6 +15,7 @@
     width: 50vw;
     height: 50vh;
     position:relative;
+    text-align: center;
 }
 
 .item{
@@ -77,4 +78,8 @@
 
 .circle.active, .circle:hover{
     background-color: rgba(174, 174, 174, 1); 
+}
+
+button {
+    padding: 5px;
 }
