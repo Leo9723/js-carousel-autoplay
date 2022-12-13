@@ -19,7 +19,9 @@
 }
 
 .item{
-    display: none;
+    width: 0vw;
+    display: inline-block;
+    transition: all 0.5s;
 }
 
 .item-slider, .item, img{
@@ -57,7 +59,8 @@
 }
 
 .item.active{
-    display: block;
+    width: 50vw;
+    transition: all 0.5s;
 }
 
 .circles-container{
